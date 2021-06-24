@@ -1,4 +1,8 @@
 export default function Discover(){
-    return <h1>test</h1>
+    return (
+        <>
+            <h1>Discover Aisle</h1>
+        </>
+    )
 }
 

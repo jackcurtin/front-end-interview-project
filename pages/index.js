@@ -1,4 +1,7 @@
 import Head from "next/head";
+import Link from "next/link";
+import Navbar from "../components/navbar/Navbar";
+import React from "react";
 
 const Index = () => {
   return (
@@ -9,11 +12,12 @@ const Index = () => {
         <link rel="stylesheet" href="https://use.typekit.net/zdz0zoa.css" />
       </Head>
       <main>
-        <h1>Welcome to the Foxtrot front-end coding project</h1>
-        <p>
-          Please take a look at the README before staring and feel free to reach
-          out with any questions or concerns!
-        </p>
+          <Navbar></Navbar>
+        <h1>
+            <Link href="/discover">
+                <a>Browse</a>
+            </Link>
+        </h1>
       </main>
     </div>
   );
