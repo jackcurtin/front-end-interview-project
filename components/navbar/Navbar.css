@@ -1,6 +1,7 @@
 .navbar {
     background: black;
     height: 80px;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +12,8 @@
 
 .navbar-container {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
     height: 80px;
     max-width: 1500px;
@@ -26,3 +28,31 @@
     align-items: center;
     letter-spacing: .2rem;
 }
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    justify-content: start;
+    padding-left: 0px;
+}
+
+.nav-item {
+    height: 80px;
+}
+
+.nav-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-cart-icon{
+    color: white;
+    padding-right: 10px;
+}
+
