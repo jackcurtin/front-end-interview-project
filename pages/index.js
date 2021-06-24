@@ -2,9 +2,10 @@ import Head from "next/head";
 import Link from "next/link";
 import Navbar from "../components/navbar/Navbar";
 import React from "react";
-import ProductGroup from "./ProductGroup";
+import ProductGroup from "../components/products/ProductGroup";
 
-const Index = () => {
+const Index = ({ products }) => {
+    const groups = products.aisle.groups;
   return (
     <div>
       <Head>
@@ -26,9 +27,14 @@ const Index = () => {
                     </div>
                 </div>
                 <div className="discover-aisle-product-group">
-                    <div className="discover-aisle-product-grid">
-                        <ProductGroup></ProductGroup>
-                    </div>
+                    <ul>
+                        {console.log(groups)}
+                        {groups.map(group => (
+                            <ProductGroup className="discover-aisle-product-group-item"
+                                          title={group.name}>
+                            </ProductGroup>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </section>
@@ -38,3 +44,18 @@ const Index = () => {
 };
 
 export default Index;
+
+export async function getStaticProps(context) {
+    const res = await fetch("https://api.foxtrotchicago.com/v5/inventory/aisles/224/items?store_id=6")
+    const products = await res.json()
+
+    if (!products) {
+        return {
+            notFound: true,
+        }
+    }
+
+    return {
+        props: { products },
+    }
+}
