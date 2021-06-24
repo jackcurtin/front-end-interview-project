@@ -5,8 +5,10 @@ export default function Navbar (){
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <Link href="/" className="navbar-logo">
-                        Foxtrot
+                    <Link href="/">
+                        <h1 className="navbar-logo">
+                            FOXTROT
+                        </h1>
                     </Link>
                 </div>
             </nav>
