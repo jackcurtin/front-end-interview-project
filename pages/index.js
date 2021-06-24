@@ -28,10 +28,11 @@ const Index = ({ products }) => {
                 </div>
                 <div className="discover-aisle-product-group">
                     <ul>
-                        {console.log(groups)}
                         {groups.map(group => (
                             <ProductGroup className="discover-aisle-product-group-item"
-                                          title={group.name}>
+                                          title={group.name}
+                                          products={group.products}
+                            >
                             </ProductGroup>
                         ))}
                     </ul>
