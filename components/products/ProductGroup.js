@@ -13,7 +13,9 @@ export default function ProductGroup(props){
                             {product.title}
                         </p>
                         <p>
-                            {product.unitPrice}
+                            {new Intl.NumberFormat("en-US",
+                                {style: "currency",
+                                currency: "USD"}).format(product.unitPrice)}
                         </p>
                     </div>
                 ))}

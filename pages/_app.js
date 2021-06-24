@@ -1,6 +1,7 @@
 import React from "react";
 import { GlobalStyles } from "../components";
 import "../components/navbar/Navbar.css";
+import "../components/products/ProductGroup.css"
 import "./styles.css";
 
 const App = ({ Component, pageProps }) => {
