@@ -1,0 +1,22 @@
+.discover-aisle-container{
+    margin: 6% 20%
+}
+
+.discover-aisle-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.discover-aisle-header-img{
+    width: 450px;
+}
+.discover-aisle-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: center;
+}
+.discover-aisle-title{
+    font-size: xx-large;
+    margin: 0;
+}

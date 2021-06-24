@@ -13,11 +13,19 @@ const Index = () => {
       </Head>
       <main>
           <Navbar></Navbar>
-        <h1>
-            <Link href="/discover">
-                <a>Browse</a>
-            </Link>
-        </h1>
+        <section className="discover-aisle">
+            <div className="discover-aisle-container">
+                <div className="discover-aisle-header">
+                    <img src="https://www.papercitymag.com/wp-content/uploads/2020/07/Foxtrot-Interior-University-Park-2.jpg"
+                    className="discover-aisle-header-img"/>
+                    <div className="discover-aisle-text">
+                        <h1 className="discover-aisle-title">Discover Aisle</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus sit amet euismod dui, non pharetra nisi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
       </main>
     </div>
   );
