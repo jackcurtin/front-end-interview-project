@@ -9,3 +9,6 @@
 .product-image{
     width: 200px;
 }
+.product-price{
+    color: gray;
+}

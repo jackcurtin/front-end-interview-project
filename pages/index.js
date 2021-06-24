@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "../components/navbar/Navbar";
 import React from "react";
 import ProductGroup from "../components/products/ProductGroup";
+import Footer from "../components/footer/Footer";
 
 const Index = ({ products }) => {
     const groups = products.aisle.groups;
@@ -39,6 +40,7 @@ const Index = ({ products }) => {
                 </div>
             </div>
         </section>
+          <Footer></Footer>
       </main>
     </div>
   );

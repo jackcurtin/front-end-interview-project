@@ -9,10 +9,10 @@ export default function ProductGroup(props){
                     <div className="product-card">
                         <img src={product.assets[0].url}
                         className="product-image"/>
-                        <p>
+                        <p className="product-title">
                             {product.title}
                         </p>
-                        <p>
+                        <p className="product-price">
                             {new Intl.NumberFormat("en-US",
                                 {style: "currency",
                                 currency: "USD"}).format(product.unitPrice)}
