@@ -49,6 +49,13 @@
     align-items: center;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    cursor: pointer;
+    height: 55%;
+}
+
+.nav-link:hover {
+    border-bottom: 4px solid white;
+    transition: all 0.2s ease-out;
 }
 
 .nav-cart-icon{
@@ -56,19 +63,32 @@
     padding-right: 10px;
 }
 
-.menu-bars-icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: white
-}
 
-.fa-times {
+.fa-bars {
     color: white;
-    font-size: 2rem;
 }
 
+.menu-bars-icon {
+    display: none;
+}
+
+
+@media screen and (max-width: 960px) {
+
+    .menu-bars-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: white
+    }
+
+    .fa-times {
+        color: white;
+        font-size: 2rem;
+    }
+
+}
