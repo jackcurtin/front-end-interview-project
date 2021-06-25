@@ -29,7 +29,7 @@ export default function Navbar (){
                     <div className="menu-bars-icon" onClick={handleClick}>
                         <FontAwesomeIcon icon={click ? faTimes : faBars} />
                     </div>
-                    <ul className="nav-menu">
+                    <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">
                             <p className="nav-link">Stores</p>
                         </li>
@@ -42,9 +42,11 @@ export default function Navbar (){
                             FOXTROT
                         </h1>
                     </Link>
-                    <FontAwesomeIcon
-                        icon={faShoppingCart} className="nav-cart-icon">
-                    </FontAwesomeIcon>
+                    <div className="nav-cart-container">
+                        <FontAwesomeIcon
+                            icon={faShoppingCart} className="nav-cart-icon">
+                        </FontAwesomeIcon>
+                    </div>
                 </div>
             </nav>
         </>
