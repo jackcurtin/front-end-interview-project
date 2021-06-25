@@ -1,9 +1,24 @@
 import Head from "next/head";
-import Link from "next/link";
 import Navbar from "../components/navbar/Navbar";
 import React from "react";
 import ProductGroup from "../components/products/ProductGroup";
 import Footer from "../components/footer/Footer";
+
+//makes one API call on the main page, then passes data down through component props
+export async function getStaticProps(context) {
+    const res = await fetch("https://api.foxtrotchicago.com/v5/inventory/aisles/224/items?store_id=6")
+    const products = await res.json()
+
+    if (!products) {
+        return {
+            notFound: true,
+        }
+    }
+
+    return {
+        props: { products },
+    }
+}
 
 const Index = ({ products }) => {
     const groups = products.aisle.groups;
@@ -29,6 +44,7 @@ const Index = ({ products }) => {
                 </div>
                 <div className="discover-aisle-product-group">
                     <ul className="product-list">
+                        {/*generates ProductGroup component for each group from the API fetch*/}
                         {groups.map(group => (
                             <ProductGroup className="discover-aisle-product-group-item"
                                           title={group.name}
@@ -47,18 +63,3 @@ const Index = ({ products }) => {
 };
 
 export default Index;
-
-export async function getStaticProps(context) {
-    const res = await fetch("https://api.foxtrotchicago.com/v5/inventory/aisles/224/items?store_id=6")
-    const products = await res.json()
-
-    if (!products) {
-        return {
-            notFound: true,
-        }
-    }
-
-    return {
-        props: { products },
-    }
-}

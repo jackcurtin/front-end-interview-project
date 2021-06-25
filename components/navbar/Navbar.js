@@ -4,6 +4,7 @@ import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useState} from "react";
 
 export default function Navbar (){
+    //for toggling menu bars with "x" icon
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
 
