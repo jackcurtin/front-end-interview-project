@@ -19,7 +19,7 @@
     max-width: 1500px;
 }
 
-.menu-bars-icon, .nav-menu, .navbar-logo, .nav-cart-container{
+.menu-bars-container, .nav-menu, .navbar-logo, .nav-cart-container{
     flex: 1;
 }
 
@@ -67,26 +67,35 @@
 }
 .nav-cart-icon{
     color: white;
+    font-size: 1.2rem;
     padding-right: 30px;
+}
+.nav-cart-icon:hover, .menu-bars-icon:hover{
+    font-size: 1.4rem;
+    transition: all 0.1s ease-out;
+    cursor: pointer;
 }
 
 .fa-bars {
     color: white;
 }
 
-.menu-bars-icon {
+.menu-bars-container {
     display: none;
 }
 
 
 @media screen and (max-width: 1059px) {
 
-    .menu-bars-icon {
+    .menu-bars-container {
         display: block;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: white;
         margin-left: 20px;
+    }
+
+    .menu-bars-icon {
+        cursor: pointer;
+        font-size: 1.3rem;
+        color: white;
     }
 
     .fa-times {

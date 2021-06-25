@@ -1,33 +1,19 @@
 import Link from "next/link";
 import {faBars, faShoppingCart, faTimes} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 export default function Navbar (){
     const [click, setClick] = useState(false);
-    const [menuBars, setBars] = useState(true);
     const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
-
-    const showBars = () => {
-        if(window.innerWidth <= 1059) {
-            setBars(false);
-        } else{
-            setBars(true);
-        }
-    }
-
-    useEffect(() => {
-        showBars();
-        window.addEventListener('resize', showBars)
-    }, []);
 
     return (
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <div className="menu-bars-icon" onClick={handleClick}>
-                        <FontAwesomeIcon icon={click ? faTimes : faBars} />
+                    <div className="menu-bars-container" onClick={handleClick}>
+                        <FontAwesomeIcon className="menu-bars-icon"
+                                         icon={click ? faTimes : faBars} />
                     </div>
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">

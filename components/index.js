@@ -2,3 +2,4 @@
 // import { Component } from './components';
 
 export { default as GlobalStyles } from "./GlobalStyles";
+
