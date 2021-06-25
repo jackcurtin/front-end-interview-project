@@ -81,6 +81,11 @@
 
 @media screen and (max-width: 1059px) {
 
+    html{
+        width: 100%;
+        height: 100%;
+    }
+
     .menu-bars-icon {
         display: block;
         font-size: 1.5rem;
@@ -97,13 +102,14 @@
     .nav-menu {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        height: 90vh;
+        width: 100vw;
+        height: 100vh;
         position: absolute;
         top: 80px;
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
+        margin: 0;
     }
 
     .nav-menu.active {
@@ -115,8 +121,9 @@
     }
     .nav-link {
         text-align: center;
-        padding: 2rem;
-        width: 100%;
+        padding: 2rem 0;
+        margin-right: 0;
+        width: 100vw;
         display: table;
     }
     .nav-link:hover {
@@ -124,5 +131,4 @@
         color: black;
         border-radius: 0;
     }
-
 }
