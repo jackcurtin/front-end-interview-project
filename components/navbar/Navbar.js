@@ -10,7 +10,7 @@ export default function Navbar (){
     const closeMobileMenu = () => setClick(false);
 
     const showBars = () => {
-        if(window.innerWidth <= 960) {
+        if(window.innerWidth <= 1059) {
             setBars(false);
         } else{
             setBars(true);

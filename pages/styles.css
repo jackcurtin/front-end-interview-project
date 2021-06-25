@@ -23,3 +23,18 @@
 ul{
     padding-left: 0;
 }
+
+@media screen and (max-width: 1059px) {
+    .discover-aisle-container{
+        margin: 0;
+    }
+    .discover-aisle-header{
+        flex-direction: column;
+    }
+    .discover-aisle-header-img{
+        width: 100%;
+    }
+    .product-list{
+        padding-left: 20px;
+    }
+}

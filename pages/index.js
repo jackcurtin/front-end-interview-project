@@ -28,7 +28,7 @@ const Index = ({ products }) => {
                     </div>
                 </div>
                 <div className="discover-aisle-product-group">
-                    <ul>
+                    <ul className="product-list">
                         {groups.map(group => (
                             <ProductGroup className="discover-aisle-product-group-item"
                                           title={group.name}
