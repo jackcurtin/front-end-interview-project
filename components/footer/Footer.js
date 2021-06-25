@@ -14,8 +14,8 @@ export default function Footer () {
                 <FontAwesomeIcon icon={faEnvelope} className="footer-icon"></FontAwesomeIcon>
             </span>
             <span className="fine-print-links">
-                <p>Terms of Service</p>
-                <p>Privacy</p>
+                <p className="fine-print-link">Terms of Service</p>
+                <p className="fine-print-link">Privacy</p>
             </span>
         </div>
     )

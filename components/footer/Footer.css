@@ -13,4 +13,13 @@
 
 .fine-print-links{
     color: white;
+    display: flex;
+}
+.fine-print-link{
+    padding: 0.5rem 1rem;
+    font-size: small;
+}
+.footer-icon{
+    font-size: 1.75rem;
+    padding: 1rem;
 }
