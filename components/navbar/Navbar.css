@@ -56,3 +56,19 @@
     padding-right: 10px;
 }
 
+.menu-bars-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white
+}
+
+.fa-times {
+    color: white;
+    font-size: 2rem;
+}
+
