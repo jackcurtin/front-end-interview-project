@@ -40,7 +40,7 @@
     list-style: none;
     text-align: center;
     justify-content: start;
-    padding-left: 0px;
+    padding-left: 15px;
 }
 
 .nav-item {
@@ -81,17 +81,12 @@
 
 @media screen and (max-width: 1059px) {
 
-    html{
-        width: 100%;
-        height: 100%;
-    }
-
     .menu-bars-icon {
         display: block;
         font-size: 1.5rem;
         cursor: pointer;
         color: white;
-        margin-left: 10px;
+        margin-left: 20px;
     }
 
     .fa-times {
